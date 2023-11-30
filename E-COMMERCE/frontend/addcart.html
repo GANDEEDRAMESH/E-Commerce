@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <style>
+        /* Your CSS styles go here */
+    </style>
+</head>
+<body>
+
+<div class="cart-container">
+    <!-- Cart Items -->
+    <div class="cart-item" id="item1">
+        <img src="item1.jpg" alt="Item 1" class="item-image">
+        <div class="item-details">
+            <div class="item-name">Product Name 1</div>
+            <div class="item-quantity" id="quantity-item1">Quantity: 2</div>
+            <div class="item-price">$20.00 each</div>
+            <button class="buy-now-button" onclick="addToCart('item1')">Buy Now</button>
+        </div>
+    </div>
+
+    <div class="cart-item" id="item2">
+        <img src="item2.jpg" alt="Item 2" class="item-image">
+        <div class="item-details">
+            <div class="item-name">Product Name 2</div>
+            <div class="item-quantity" id="quantity-item2">Quantity: 1</div>
+            <div class="item-price">$30.00 each</div>
+            <button class="buy-now-button" onclick="addToCart('item2')">Buy Now</button>
+        </div>
+    </div>
+
+    <!-- Cart Total -->
+    <div class="cart-total">
+        <div>Total: $70.00</div>
+        <button class="checkout-button">Proceed to Checkout</button>
+    </div>
+</div>
+
+<script>
+    // JavaScript code
+    function addToCart(itemId) {
+        // Get the current quantity
+        var quantityElement = document.getElementById('quantity-' + itemId);
+        var currentQuantity = parseInt(quantityElement.innerText.split(":")[1].trim());
+
+        // Update the quantity
+        currentQuantity++;
+        quantityElement.innerText = 'Quantity: ' + currentQuantity;
+
+        // This is a placeholder; you would typically add the item to the server-side cart
+        alert('Item added to cart: ' + itemId + ', Quantity: ' + currentQuantity);
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!-- Your product information and other HTML elements -->
+
+<button id="addToCartBtn" onclick="addToCart()">Add to Cart</button>
+
+<script>
+  function addToCart() {
+    // Get product details (you may need to adjust this based on your page structure)
+    var productId = document.getElementById('productId').value;
+    var productName = document.getElementById('productName').innerText;
+    var productPrice = document.getElementById('productPrice').innerText;
+
+    // Send an AJAX request to the server to add the item to the cart
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState == 4 && xhr.status == 200) {
+        // Handle the response from the server (e.g., display a success message)
+        alert(xhr.responseText);
+      }
+    };
+
+    xhr.open("POST", "addToCart.php", true);
+    xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhr.send("id=" + productId + "&name=" + productName + "&price=" + productPrice);
+  }
+</script>

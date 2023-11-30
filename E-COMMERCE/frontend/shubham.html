@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback and Survey System</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+        }
+
+        section {
+            margin: 20px;
+        }
+
+        .survey-form {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .survey-form label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        .survey-form input[type="text"],
+        .survey-form textarea {
+            width: calc(100% - 16px);
+            padding: 12px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+
+        .survey-form input[type="submit"] {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .survey-form input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        .survey-results {
+            margin-top: 20px;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .survey-results h2 {
+            color: #333;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        #thanks-message {
+            display: none;
+            text-align: center;
+            padding: 30px;
+            background-color: #4caf50;
+            color: #fff;
+            border-radius: 12px;
+            margin-top: 20px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Feedback and Survey System</h1>
+    </header>
+
+    <section>
+        <div class="survey-form" id="survey-form">
+            <h2>Share Your Thoughts</h2>
+            <form id="feedback-form">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Your Email:</label>
+                <input type="text" id="email" name="email" required>
+
+                <label for="feedback">Your Feedback:</label>
+                <textarea id="feedback" name="feedback" rows="4" required></textarea>
+
+                <input type="submit" value="Submit Feedback">
+            </form>
+        </div>
+
+        <div id="thanks-message">
+            <h2>Thanks for your valuable feedback!</h2>
+            <p>We appreciate your time and input.</p>
+            <p>The website will now close.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Additional Information</h2>
+        <p>Your opinion matters! Please take a moment to share your feedback on  E-Shop . Your insights help us improve and tailor our services to your needs.</p>
+        <img src="logo.png" alt="Description of the image">
+    </section>
+
+    <script>
+        document.getElementById('feedback-form').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            // Assume some validation here before displaying the thanks message
+
+            // Display thanks message and close the site after a delay
+            document.getElementById('survey-form').style.display = 'none';
+            document.getElementById('thanks-message').style.display = 'block';
+
+            setTimeout(function () {
+                window.close();
+            }, 3000); // Close the window after 3 seconds (adjust as needed)
+        });
+    </script>
+
+</body>
+</html>

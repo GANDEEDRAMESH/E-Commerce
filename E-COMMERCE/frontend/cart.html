@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .cart-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 600px;
+        }
+
+        .cart-item {
+            display: flex;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+
+        .item-image {
+            width: 80px;
+            height: 80px;
+            margin-right: 20px;
+        }
+
+        .item-details {
+            flex-grow: 1;
+        }
+
+        .item-name {
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .item-quantity {
+            color: #555;
+        }
+
+        .item-price {
+            color: #4caf50;
+            font-weight: bold;
+        }
+
+        .cart-total {
+            margin-top: 20px;
+            text-align: right;
+        }
+
+        .checkout-button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .checkout-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<div class="cart-container">
+    <!-- Cart Items -->
+    <div class="cart-item">
+        <img src="item1.jpg" alt="Item 1" class="item-image">
+        <div class="item-details">
+            <div class="item-name">Product Name 1</div>
+            <div class="item-quantity">Quantity: 2</div>
+            <div class="item-price">$20.00 each</div>
+        </div>
+    </div>
+
+    <div class="cart-item">
+        <img src="item2.jpg" alt="Item 2" class="item-image">
+        <div class="item-details">
+            <div class="item-name">Product Name 2</div>
+            <div class="item-quantity">Quantity: 1</div>
+            <div class="item
